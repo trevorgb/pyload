@@ -168,6 +168,9 @@ class CurlChunk(CurlRequest):
         self.setRequestContext(self.p.url, self.p.get, self.p.post, self.p.referer, self.p.cookies)
         self.c.setopt(pycurl.WRITEFUNCTION, self.writeBody)
         self.c.setopt(pycurl.HEADERFUNCTION, self.writeHeader)
+        self.c.setopt(pycurl.SSLVERSION, 3)
+        self.c.setopt(pycurl.SSL_CIPHER_LIST, 'SSLv3')
+        
 
         # request all bytes, since some servers in russia seems to have a defect arihmetic unit
 
