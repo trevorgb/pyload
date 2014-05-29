@@ -66,4 +66,4 @@ dist
 .tmp
 .sass-cache
 app/components
-
+pyload/web/app/components/*
